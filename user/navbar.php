@@ -11,7 +11,7 @@
 				<li id="history"><a href="history.php"><span class="fa fa-list-alt"></span> History</a></li>
 				<li>
 					<form class="navbar-form" role="search" method="POST" action="search_result2.php">
-					<div class="input-group" id="searchbox" style="width:500px;">
+					<div class="input-group" id="searchbox" style="width:400px;">
 						<input type="text" class="form-control" placeholder="Search Product" name="search" id="search">
 						<div class="input-group-btn">
 						<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -39,6 +39,9 @@
 
 						?>
                     </ul>
+                </li>
+                <li>
+                    <a href="stock.php"><i class="fa fa-industry"></i> Stocks </a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">

@@ -8,13 +8,13 @@
                 </div>
                 <div class="modal-body">
 				<?php
-					$sales=mysqli_query($conn,"select * from sales left join customer on customer.userid=sales.userid where salesid='".$sqrow['salesid']."'");
+					$sales=mysqli_query($conn,"select * from sales left join employee on employee.userid=sales.userid where salesid='".$sqrow['salesid']."'");
 					$srow=mysqli_fetch_array($sales);
 				?>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12">
-							<span>Customer: <strong><?php echo ucwords($srow['customer_name']); ?></strong></span>
+							<span>Employee: <strong><?php echo ucwords($srow['employee_name']); ?></strong></span>
 							<span class="pull-right">Date: <strong><?php echo date("F d, Y", strtotime($srow['sales_date'])); ?></strong></span>
 						</div>
 					</div>

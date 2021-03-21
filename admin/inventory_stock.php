@@ -34,13 +34,13 @@
 							<td><?php echo date('M d, Y h:i A',strtotime($iqrow['inventory_date'])); ?></td>
 							<td>
 							<?php 
-								$u=mysqli_query($conn,"select * from `user` left join customer on customer.userid=user.userid left join supplier on supplier.userid=user.userid where user.userid='".$iqrow['userid']."'");
+								$u=mysqli_query($conn,"select * from `user` left join employee on employee.userid=user.userid left join supplier on supplier.userid=user.userid where user.userid='".$iqrow['userid']."'");
 								$urow=mysqli_fetch_array($u);
 								if($urow['access']==1){
 									echo "Admin";
 								}
 								elseif($urow['access']==2){
-									echo $urow['customer_name'];
+									echo $urow['employee_name'];
 								}
 								else{
 									echo $urow['company_name'];
