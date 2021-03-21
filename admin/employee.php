@@ -8,9 +8,9 @@
 <div class="container-fluid">
 	<div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Customers
+            <h1 class="page-header">Employees
 				<span class="pull-right">
-					<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addcustomer"><i class="fa fa-plus-circle"></i> Add Customer</button>
+					<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addemployee"><i class="fa fa-plus-circle"></i> Add Employee</button>
 				</span>
 			</h1>
         </div>
@@ -20,7 +20,7 @@
             <table width="100%" class="table table-striped table-bordered table-hover" id="cusTable">
                 <thead>
                     <tr>
-                        <th>Customer Name</th>
+                        <th>Employee Name</th>
                         <th>Username</th>
                         <th>Password</th>
 						<th>Address</th>
@@ -30,11 +30,11 @@
                 </thead>
                 <tbody>
 				<?php
-					$cq=mysqli_query($conn,"select * from customer left join user on user.userid=customer.userid");
+					$cq=mysqli_query($conn,"select * from employee left join user on user.userid=employee.userid");
 					while($cqrow=mysqli_fetch_array($cq)){
 					?>
 						<tr>
-							<td><?php echo $cqrow['customer_name']; ?></td>
+							<td><?php echo $cqrow['employee_name']; ?></td>
 							<td><?php echo $cqrow['username']; ?></td>
 							<td>*****</td>
 							<td><?php echo $cqrow['address']; ?></td>

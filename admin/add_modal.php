@@ -117,17 +117,17 @@
     </div>
 <!-- /.modal -->
 
-<!-- Add Customer -->
-    <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Add Employee -->
+    <div class="modal fade" id="addemployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <center><h4 class="modal-title" id="myModalLabel">Add New Customer</h4></center>
+                    <center><h4 class="modal-title" id="myModalLabel">Add New Employee</h4></center>
                 </div>
                 <div class="modal-body">
 				<div class="container-fluid">
-                    <form role="form" method="POST" action="addcustomer.php" enctype="multipart/form-data">
+                    <form role="form" method="POST" action="addemployee.php" enctype="multipart/form-data">
 						<div class="container-fluid">
 						<div style="height:15px;"></div>
 						<div class="form-group input-group">

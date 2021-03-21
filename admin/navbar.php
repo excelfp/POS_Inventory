@@ -27,14 +27,6 @@
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Inventory <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><span class="glyphicon glyphicon-user"></span> Users <span class="fa arrow"></span></a>
-									<ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="customer.php"> <i class="fa fa-credit-card"></i> Customer </a>
-                                        </li>                                        
-                                    </ul>
-                                </li>
-                                <li>
                                     <a href="product.php"><span class="fa fa-product-hunt"></span> Products <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
@@ -47,9 +39,6 @@
                                 </li>
                                 <li>
                                     <a href="stock.php"> <i class="fa fa-industry"></i> Stocks </a>
-                                </li>
-                                <li>
-                                    <a href="supplier.php"> <i class="fa fa-truck"></i> Supplier </a>
                                 </li>
                             </ul>
                         </li>
@@ -65,6 +54,17 @@
                                 <li>
                                     <a href="inventory_stock.php"><i class="fa fa-signal fa-fw"></i> Stocks Report</a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-user"></i> Users <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="employee.php"><i class="glyphicon glyphicon-user"></i> Employee </a>
+                                </li>
+                                <li>
+                                    <a href="supplier.php"> <i class="fa fa-truck"></i> Supplier </a>
+                                </li>                                      
                             </ul>
                         </li>
 						<li><a href="#logout" data-toggle="modal"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>

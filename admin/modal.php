@@ -69,7 +69,7 @@
 <!-- Edit Profile -->
     <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<?php
-		$cq=mysqli_query($conn,"select * from customer left join `user` on user.userid=customer.userid where customer.userid='".$_SESSION['id']."'");
+		$cq=mysqli_query($conn,"select * from employee left join `user` on user.userid=employee.userid where employee.userid='".$_SESSION['id']."'");
 		$crow=mysqli_fetch_array($cq);
 	?>
         <div class="modal-dialog">
@@ -85,7 +85,7 @@
 						<div style="height:15px;"></div>
 						<div class="form-group input-group">
                             <span style="width:150px;" class="input-group-addon">Name:</span>
-                            <input type="text" style="width:330px; text-transform:capitalize;" class="form-control" name="cname" value="<?php echo ucwords($crow['customer_name']); ?>">
+                            <input type="text" style="width:330px; text-transform:capitalize;" class="form-control" name="cname" value="<?php echo ucwords($crow['employee_name']); ?>">
                         </div>
 						<div class="form-group input-group">
                             <span style="width:150px;" class="input-group-addon">Address:</span>
