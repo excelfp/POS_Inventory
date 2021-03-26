@@ -16,8 +16,8 @@
         </div>
     </div>
     <div class="row">
-    	<div class="col-sm-4"><div class="dataTables_length" id="supTable_length"><label>Show <select name="supTable_length" aria-controls="supTable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div>
-    	<div class="col-sm-6"><div id="cusTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="cusTable"></label></div></div>
+    	<!-- <div class="col-sm-4"><div class="dataTables_length" id="supTable_length"><label>Show <select name="supTable_length" aria-controls="supTable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
+    	<div class="col-sm-6"><div id="cusTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="cusTable"></label></div> -->
         <div class="col-lg-12">
             <table width="100%" class="table table-striped table-bordered table-hover" id="prodTable">
                 <thead>
