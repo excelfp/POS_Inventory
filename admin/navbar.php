@@ -24,10 +24,13 @@
                             <a href="index.php"><i class="fa fa-home fa-fw"></i> Home </a>
                         </li>
                         <li>
+                            <a href="sales_trans.php"><i class="fa fa-usd fa-fw"></i> Sales </a>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Inventory <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="product.php"><span class="fa fa-product-hunt"></span> Products <span class="fa arrow"></span></a>
+                                    <a href="product.php"><span class="fa fa-product-hunt fa-fw"></span> Products <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
                                             <a href="product_makanan.php"><i class="fa fa-cutlery fa-fw"></i> Makanan </a>
@@ -38,7 +41,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="stock.php"> <i class="fa fa-industry"></i> Stocks </a>
+                                    <a href="stock.php"> <i class="fa fa-industry fa-fw"></i> Stocks </a>
                                 </li>
                             </ul>
                         </li>
@@ -57,13 +60,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-user"></i> Users <span class="fa arrow"></span></a>
+                            <a href="#"><i class="glyphicon glyphicon-user fa-fw"></i> Users <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="employee.php"><i class="glyphicon glyphicon-user"></i> Employee </a>
+                                    <a href="employee.php"><i class="glyphicon glyphicon-user fa-fw"></i> Employee </a>
                                 </li>
                                 <li>
-                                    <a href="supplier.php"> <i class="fa fa-truck"></i> Supplier </a>
+                                    <a href="supplier.php"> <i class="fa fa-truck fa-fw"></i> Supplier </a>
                                 </li>                                      
                             </ul>
                         </li>
