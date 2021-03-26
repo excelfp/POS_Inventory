@@ -175,14 +175,14 @@
                             <span style="width:120px;" class="input-group-addon">Contact Info:</span>
                             <input type="text" style="width:400px;" class="form-control" name="contact">
                         </div>
-						<div class="form-group input-group">
+						<!-- <div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Username:</span>
                             <input type="text" style="width:400px;" class="form-control" name="username" required>
                         </div>
 						<div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Password:</span>
                             <input type="password" style="width:400px;" class="form-control" name="password" required>
-                        </div>  						
+                        </div>  --> 						
 						</div>
 				</div>
 				</div>

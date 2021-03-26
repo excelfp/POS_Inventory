@@ -60,13 +60,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-user fa-fw"></i> Users <span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> People <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="employee.php"><i class="glyphicon glyphicon-user fa-fw"></i> Employee </a>
+                                    <a href="employee.php"><i class="fa fa-user fa-fw"></i> Employees </a>
                                 </li>
                                 <li>
-                                    <a href="supplier.php"> <i class="fa fa-truck fa-fw"></i> Supplier </a>
+                                    <a href="supplier.php"> <i class="fa fa-truck fa-fw"></i> Suppliers </a>
                                 </li>                                      
                             </ul>
                         </li>

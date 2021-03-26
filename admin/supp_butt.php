@@ -57,16 +57,6 @@
                             <input type="text" style="width:400px;" value="<?php echo $b['contact'] ?>" class="form-control" name="contact">
                         </div>
 						<div style="height:10px;"></div>
-						<div class="form-group input-group">
-                            <span class="input-group-addon" style="width:120px;">Username:</span>
-                            <input type="text" style="width:400px;" value="<?php echo $b['username'] ?>" class="form-control" name="username">
-                        </div>
-						<div style="height:10px;"></div>					
-						<div class="form-group input-group">
-                            <span class="input-group-addon" style="width:120px;">Password:</span>
-                            <input type="password" style="width:400px;" value="<?php echo $b['password'] ?>" class="form-control" name="password">
-                        </div>
-						<div style="height:10px;"></div>
 				</div>
 				</div>
                 <div class="modal-footer">

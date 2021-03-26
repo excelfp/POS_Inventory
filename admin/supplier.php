@@ -21,8 +21,6 @@
                 <thead>
                     <tr>
                         <th>Company Name</th>
-                        <th>Username</th>
-                        <th>Password</th>
 						<th>Address</th>
                         <th>Contact Info</th>
 						<th>Action</th>
@@ -35,8 +33,6 @@
 					?>
 						<tr>
 							<td><?php echo $sqrow['company_name']; ?></td>
-							<td><?php echo $sqrow['username']; ?></td>
-							<td>*****</td>
 							<td><?php echo $sqrow['company_address']; ?></td>
 							<td><?php echo $sqrow['contact']; ?></td>
 							<td>

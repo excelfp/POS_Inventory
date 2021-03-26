@@ -1,7 +1,7 @@
 <?php include('session.php'); ?>
 <?php include('header.php'); ?>
 <body>
-	<?php include('navbar.php'); ?>
+	<?php include('salesnavbar.php'); ?>
 	<div id="wrapper">
 		<div id="page-wrapper">
 			<div class="container-fluid" style="max-width: 750px;">
