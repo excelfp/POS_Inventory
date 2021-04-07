@@ -1,6 +1,7 @@
 <?php
 	include('session.php');
 	$total=$_GET['total'];
+	$customer=$_POST['customer'];
 	
 	if(preg_match("/^[0-9,]+$/", $total)){
 		$new=$total;
@@ -9,12 +10,12 @@
 		$new = str_replace(',', '', $total);
 	}
 	
-	mysqli_query($conn,"insert into sales (userid, sales_total, sales_date) values ('".$_SESSION['id']."', '$new', NOW())");
+	mysqli_query($conn,"insert into sales (userid, sales_total, sales_date, customer_name) values ('".$_SESSION['id']."', '$new', NOW(), '$customer')");
 	$sid=mysqli_insert_id($conn);
 	
 	$query=mysqli_query($conn,"select * from cart where userid='".$_SESSION['id']."'");
 	while($row=mysqli_fetch_array($query)){
-		mysqli_query($conn,"insert into sales_detail (salesid, productid, sales_qty) values ('$sid', '".$row['productid']."', '".$row['qty']."')");
+		mysqli_query($conn,"insert into sales_detail (salesid, productid, sales_qty, customer_name) values ('$sid', '".$row['productid']."', '".$row['qty']."', '$customer')");
 		
 		$pro=mysqli_query($conn,"select * from product where productid='".$row['productid']."'");
 		$prorow=mysqli_fetch_array($pro);

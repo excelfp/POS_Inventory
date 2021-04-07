@@ -13,7 +13,10 @@
 				?>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-6">
+							<p class="pull-left">Customer: <?php echo $srow['customer_name']; ?></p>
+						</div>
+						<div class="col-lg-6">
 							<p class="pull-right">Date: <?php echo date("F d, Y", strtotime($srow['sales_date'])); ?></p>
 						</div>
 					</div>

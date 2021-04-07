@@ -8,7 +8,7 @@
 <div class="container-fluid">
 	<!-- Dashbpards -->
 <div style="height:50px;"></div>
-	<img src="../upload/cover.jpg" class="thumbnail" style="height:430px; width:950px;">
+	<!-- <img src="../upload/cover.jpg" class="thumbnail" style="height:430px; width:950px;"> -->
 </div>
 </div>
 </div>
