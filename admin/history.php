@@ -20,6 +20,7 @@
 						<tr>
 							<th class="hidden"></th>
 							<th>Purchase Date</th>
+							<th>Customer</th>
 							<th>Total Amount</th>
 							<th>Action</th>
 						</tr>
@@ -32,6 +33,7 @@
 									<tr>
 										<td class="hidden"></td>
 										<td><?php echo date("M d, Y - h:i A", strtotime($hrow['sales_date']));?></td>
+										<td><?php echo $hrow['customer_name']; ?></td>
 										<td><?php echo number_format($hrow['sales_total'],2); ?></td>
 										<td>
 											<a href="#detail<?php echo $hrow['salesid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-fullscreen"></span> View Full Details</a>

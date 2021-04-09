@@ -1,6 +1,6 @@
 <?php
 	include('session.php');
-	$total=$_GET['total'];
+	$total=$_POST['total'];
 	$customer=$_POST['customer'];
 	
 	if(preg_match("/^[0-9,]+$/", $total)){
