@@ -30,7 +30,7 @@
                 </thead>
                 <tbody>
 				<?php
-					$cq=mysqli_query($conn,"select * from employee left join user on user.userid=employee.userid");
+					$cq=mysqli_query($conn,"select * from employee left join user on user.userid=employee.userid where access <> 1");
 					while($cqrow=mysqli_fetch_array($cq)){
 					?>
 						<tr>

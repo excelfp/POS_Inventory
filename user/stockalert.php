@@ -8,6 +8,7 @@
 		$stock_qty=$pqrow['stock_qty'];
 
 		echo '<script type="text/javascript">
+				
 				alert("There\'s Stock(s) You Need to Purchase: \r '.$stock_name.' - '.$stock_qty.' left.");
 			</script>';
 	}
