@@ -68,7 +68,7 @@
                         <div style="height:15px;"></div>
                         <div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Name:</span>
-                            <input type="text" style="width:400px; text-transform:capitalize;" class="form-control" name="name" required>
+                            <input type="text" style="width:400px; text-transform:capitalize;" class="form-control" name="name" required="true">
                         </div>
                         <div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Supplier:</span>
@@ -85,12 +85,16 @@
                         </div>
                         <div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Price:</span>
-                            <input type="text" style="width:400px;" class="form-control" name="price" required>
+                            <input type="text" style="width:400px;" class="form-control" name="price" required="true">
                         </div>
                         <div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Quantity:</span>
-                            <input type="text" style="width:400px;" class="form-control" name="qty">
-                        </div>          
+                            <input type="text" style="width:400px;" class="form-control" name="qty" required="true">
+                        </div>
+                        <div class="form-group input-group">
+                            <span style="width:120px;" class="input-group-addon">Min. Qty:</span>
+                            <input type="text" style="width:400px; text-transform:capitalize;" class="form-control" name="min_qty" required="true">
+                        </div>  
                         </div>
                 </div>
                 </div>

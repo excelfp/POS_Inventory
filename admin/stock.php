@@ -25,6 +25,7 @@
 						<th>Supplier</th>
                         <th>Price</th>
 						<th>Quantity</th>
+						<th>Min. Quantity</th>
 						<th>Action</th>
                     </tr>
                 </thead>
@@ -37,8 +38,9 @@
 						<tr>
 							<td><?php echo $sqrow['stock_name']; ?></td>
 							<td><?php echo $sqrow['company_name']; ?></td>
-							<td><?php echo $sqrow['stock_price']; ?></td>
+							<td><?php echo number_format( $sqrow['stock_price'],2,",","."); ?></td>
 							<td><?php echo $sqrow['stock_qty']; ?></td>
+							<td style="width: 120px;"><?php echo $sqrow['min_qty']; ?></td>
 							<td>
 								<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editstock_<?php echo $sid; ?>"><i class="fa fa-edit"></i> Edit</button>
 								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delstock_<?php echo $sid; ?>"><i class="fa fa-trash"></i> Delete</button>
@@ -56,6 +58,7 @@
 </div>
 </div>
 <?php include('script.php'); ?>
+<?php include('stockalert.php'); ?>
 <?php include('modal.php'); ?>
 <?php include('add_modal.php'); ?>
 <script src="custom.js"></script>

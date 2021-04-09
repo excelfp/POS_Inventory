@@ -1,4 +1,4 @@
-<!-- Delete Product -->
+<!-- Delete Stock -->
     <div class="modal fade" id="delstock_<?php echo $sid; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -26,7 +26,7 @@
     </div>
 <!-- /.modal -->
 
-<!-- Edit Product -->
+<!-- Edit Stock -->
     <div class="modal fade" id="editstock_<?php echo $sid; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -46,7 +46,6 @@
                             <span class="input-group-addon" style="width:120px;">Stock Name:</span>
                             <input type="text" style="width:400px; text-transform:capitalize;" value="<?php echo ucwords($b['stock_name']); ?>" class="form-control" name="name">
                         </div>
-						<div style="height:10px;"></div>
 						<div style="height:10px;"></div>
 						<div class="form-group input-group">
                             <span class="input-group-addon" style="width:120px;">Supplier:</span>
@@ -73,6 +72,10 @@
                             <input type="text" style="width:400px;" value="<?php echo $b['stock_qty'] ?>" class="form-control" name="qty">
                         </div>
 						<div style="height:10px;"></div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon" style="width:120px;">Min. Quantity:</span>
+                            <input type="text" style="width:400px;" value="<?php echo $b['min_qty'] ?>" class="form-control" name="min_qty">
+                        </div>
 						<div style="height:10px;"></div>
 				</div>
 				</div>
