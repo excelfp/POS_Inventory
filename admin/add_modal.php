@@ -104,6 +104,66 @@
     </div>
 <!-- /.modal -->
 
+<!-- Add Stock Return -->
+    <div class="modal fade" id="addstockreturn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <center><h4 class="modal-title" id="myModalLabel">Add New Return</h4></center>
+                </div>
+                <div class="modal-body">
+                <div class="container-fluid">
+                    <form role="form" method="POST" action="addstockreturn.php" enctype="multipart/form-data">
+                        <div class="container-fluid">
+                        <div style="height:15px;"></div>
+                        <div class="form-group input-group">
+                            <span style="width:120px;" class="input-group-addon">Stock:</span>
+                            <select style="width:400px;" class="form-control" name="stock">
+                                <?php
+                                    $sup=mysqli_query($conn,"select * from stock");
+                                    while($suprow=mysqli_fetch_array($sup)){
+                                        ?>
+                                            <option value="<?php echo $suprow['stockid']; ?>"><?php echo $suprow['stock_name']; ?></option>
+                                        <?php
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group input-group">
+                            <span style="width:120px;" class="input-group-addon">Supplier:</span>
+                            <select style="width:400px;" class="form-control" name="supplier">
+                                <?php
+                                    $sup=mysqli_query($conn,"select * from supplier");
+                                    while($suprow=mysqli_fetch_array($sup)){
+                                        ?>
+                                            <option value="<?php echo $suprow['userid']; ?>"><?php echo $suprow['company_name']; ?></option>
+                                        <?php
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group input-group">
+                            <span style="width:120px;" class="input-group-addon">Quantity:</span>
+                            <input type="text" style="width:400px;" class="form-control" name="qty" required>
+                        </div>
+                        <div class="form-group input-group">
+                            <span style="width:120px;" class="input-group-addon">Description:</span>
+                            <input type="text" style="width:400px;" class="form-control" name="desc">
+                        </div>          
+                        </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- /.modal -->
+
 <!-- Add Employee -->
     <div class="modal fade" id="addemployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
