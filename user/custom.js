@@ -117,11 +117,6 @@ $(document).ready(function(){
 		}
 	});
 	
-	$(document).on('click', '#check', function(){
-		var total=$('#total').text();
-		window.location.href='confirm_check.php?total='+total;
-	});
-	
 	$(document).on('click', '.remove_prod', function(){
 		var prodid=$(this).val();
 		$.ajax({

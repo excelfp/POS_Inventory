@@ -19,7 +19,7 @@
 				while($row=mysqli_fetch_array($query)){
 					?>
 					<tr>
-						<td><button type="button" class="btn btn-danger btn-sm remove_prod" value="<?php echo $row['productid']; ?>"><i class="fa fa-trash fa-fw"></i> Remove</button></td>
+						<td style="width: 100px;"><button type="button" class="btn btn-danger btn-sm remove_prod" value="<?php echo $row['productid']; ?>"><i class="fa fa-trash fa-fw"></i> Remove</button></td>
 						<td><?php echo $row['product_name']; ?></td>
 						<td><?php echo $row['product_qty']; ?></td>
 						<td align="right"><?php echo number_format($row['product_price'],2); ?></td>
@@ -33,6 +33,7 @@
 								echo number_format($subtotal,2);
 								$total+=$subtotal;
 							?>
+							<input type="hidden" name="total" value="<?php echo $total; ?>">
 						</span></strong></td>
 					</tr>
 					<?php
