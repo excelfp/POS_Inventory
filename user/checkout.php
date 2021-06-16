@@ -4,11 +4,12 @@
 <div class="container">
 	<div style="height:50px;"></div>
 	<div class="row">
+		
 		<form method="POST" action="confirm_check.php">
 			<div class="col-lg-9">
 				<a href="index.php" class="btn btn-primary" style="position:relative; bottom: 4px; left:3px; margin-bottom: 5px;"><span class="glyphicon glyphicon-arrow-left"></span> Cancel</a>
 			</div>
-			<div class="col-lg-3" style="left: 15px;"><span>Customer: </span><input type="text" required="true" name="customer"></div>
+			<div class="col-lg-3" style="left: 15px;"><span>Customer: </span><input type="text" name="customer" required="true"></div>
 			<div style="height:10px;"></div>
 			<div id="checkout_area"></div>
 			<div class="row">

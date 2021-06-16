@@ -57,6 +57,9 @@
                                 <li>
                                     <a href="inventory_stock.php"><i class="fa fa-signal fa-fw"></i> Stocks Report</a>
                                 </li>
+                                <li>
+                                    <a href="apriori_menu.php"><i class="fa fa-list-ul fa-fw"></i> Apriori Report</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
