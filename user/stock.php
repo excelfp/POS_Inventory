@@ -42,7 +42,6 @@
 							<td><?php echo $sqrow['min_qty']; ?></td>
 							<td>
 								<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editstock_<?php echo $sid; ?>"><i class="fa fa-edit"></i> Edit</button>
-								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delstock_<?php echo $sid; ?>"><i class="fa fa-trash"></i> Delete</button>
 								<?php include('stock_button.php'); ?>
 							</td>
 						</tr>
