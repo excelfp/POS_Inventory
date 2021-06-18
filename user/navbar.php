@@ -24,7 +24,7 @@
             <ul class="nav navbar-top-links navbar-right">
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="fa fa-product-hunt fa-fw"></i> Products <i class="fa fa-caret-down"></i>
+						<i class="fa fa-usd fa-fw"></i> Sales <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu">
 						<li><a href="index.php"> All Category</a></li>
@@ -40,8 +40,17 @@
 						?>
                     </ul>
                 </li>
-                <li>
-                    <a href="stock.php"><i class="fa fa-industry"></i> Stocks </a>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-industry fa-fw"></i> Inventory <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="product_makanan.php"> Makanan </a></li>
+                    	<li class="divider"></li>
+                    	<li><a href="product_minuman.php"> Minuman </a></li>
+                    	<li class="divider"></li>
+                    	<li><a href="stock.php"> Stocks </a></li>
+                    </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
