@@ -13,8 +13,8 @@ include_once "display_mining.php";
     <div class="main-content-inner">
         <div class="container-fluid">
             <div class="page-header">
-                <h1 style="padding-top: 25px;">
-                    Proses Apriori
+                <h1 style="padding-top: 50px;">
+                    Apriori Report
                 </h1>
             </div><!-- /.page-header -->
             
@@ -168,7 +168,14 @@ else {
             FROM
              `transaksi` ".$where;
     }
-    
+
+    $truncate_transaksi_table= $db_object->db_query("TRUNCATE TABLE transaksi");
+    $set_transaksi_table= $db_object->db_query("INSERT INTO transaksi (transaction_date, produk)
+        SELECT s.sales_date, GROUP_CONCAT(DISTINCT p.product_name SEPARATOR ',') AS Products
+        FROM sales s 
+        INNER JOIN sales_detail sd ON s.salesid = sd.salesid
+        INNER JOIN product p ON sd.productid = p.productid
+        GROUP BY s.sales_date");
 
     if(isset($sql)){
         $query = $db_object->db_query($sql);
@@ -365,3 +372,5 @@ else {
                 });
             });
 </script>
+<?php include('script.php'); ?>
+<script src="custom.js"></script>

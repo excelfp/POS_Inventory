@@ -170,7 +170,7 @@ function display_process_hasil_mining($db_object, $id_process) {
             ?>
     </table>
 
-    <strong>Rule Asosiasi yang terbentuk:</strong>
+    <strong>Association Rule yang terbentuk:</strong>
     <table class='table table-bordered table-striped  table-hover'>
         <tr>
             <th>No</th>
