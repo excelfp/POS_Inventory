@@ -192,8 +192,12 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
     while ($a <= count($itemset1)) {
         $b = 0;
         while ($b <= count($itemset1)) {
-            $variance1 = $itemset1[$a];
-            $variance2 = $itemset1[$b];
+            if(isset($itemset1[$a])){
+                $variance1 = $itemset1[$a];
+            }
+            if(isset($itemset1[$b])){
+                $variance2 = $itemset1[$b];
+            }
             if (!empty($variance1) && !empty($variance2)) {
                 if ($variance1 != $variance2) {
                     if(!is_exist_variasi_itemset($NilaiAtribut1, $NilaiAtribut2, $variance1, $variance2)) {
@@ -278,11 +282,19 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
         $b = 0;
         while ($b <= count($itemset2_var1)) {
             if($a != $b){
-                $itemset1a = $itemset2_var1[$a];
-                $itemset1b = $itemset2_var1[$b];
 
-                $itemset2a = $itemset2_var2[$a];
-                $itemset2b = $itemset2_var2[$b];
+                if(isset($itemset2_var1[$a])){
+                    $itemset1a = $itemset2_var1[$a];
+                }
+                if(isset($itemset2_var1[$b])){
+                    $itemset1b = $itemset2_var1[$b];
+                }
+                if(isset($itemset2_var2[$a])){
+                    $itemset2a = $itemset2_var2[$a];
+                }
+                if(isset($itemset2_var2[$b])){
+                    $itemset2b = $itemset2_var2[$b];
+                }
 
                 if (!empty($itemset1a) && !empty($itemset1b)&& !empty($itemset2a) && !empty($itemset2b)) {
                     

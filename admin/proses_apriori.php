@@ -7,11 +7,13 @@ include_once "fungsi.php";
 include_once "mining.php";
 include_once "display_mining.php";
 ?>
-<div class="main-content">
+<div id="wrapper">
+<?php include('navbar.php'); ?>
+<div id="page-wrapper" class="main-content">
     <div class="main-content-inner">
-        <div class="page-content">
+        <div class="container-fluid">
             <div class="page-header">
-                <h1>
+                <h1 style="padding-top: 25px;">
                     Proses Apriori
                 </h1>
             </div><!-- /.page-header -->
@@ -152,24 +154,28 @@ if (isset($_POST['submit'])) {
                
 } 
 else {
-    $where = "ga gal";
+
     if(isset($_POST['range_tanggal'])){
         $tgl = explode(" - ", $_POST['range_tanggal']);
         $start = format_date($tgl[0]);
         $end = format_date($tgl[1]);
         
-        $where = " WHERE transaction_date "
+        $where = " WHERE `transaction_date` "
                 . " BETWEEN '$start' AND '$end'";
+
+        $sql = "SELECT
+            *
+            FROM
+             `transaksi` ".$where;
     }
-    $sql = "SELECT
-        *
-        FROM
-         transaksi ".$where;
     
-    $query = $db_object->db_query($sql);
-    echo "success";            
-    $jumlah = $db_object->db_num_rows($query);
-    echo "success2";            
+
+    if(isset($sql)){
+        $query = $db_object->db_query($sql);
+        $jumlah = $db_object->db_num_rows($query);
+    }
+    else { $jumlah = 0; }
+
     ?>
     <form method="post" action="">
         <div class="row">
@@ -225,7 +231,7 @@ else {
         <table class='table table-bordered table-striped  table-hover'>
             <tr>
                 <th>No</th>
-                <th>Tanggal</th>
+                <th style="width: 15%;">Tanggal</th>
                 <th>Produk</th>
             </tr>
             <?php
@@ -247,5 +253,115 @@ else {
         </div>
     </div>
 </div>
+</div>
 
-       
+<!-- basic scripts -->
+
+        <!--[if !IE]> -->
+        <script src="assets/js/jquery-2.1.4.min.js"></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+        <script type="text/javascript">
+                    if ('ontouchstart' in document.documentElement)
+                        document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!--[if lte IE 8]>
+          <script src="assets/js/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="assets/js/jquery-ui.custom.min.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/jquery.sparkline.index.min.js"></script>
+        <script src="assets/js/jquery.flot.min.js"></script>
+        <script src="assets/js/jquery.flot.pie.min.js"></script>
+        <script src="assets/js/jquery.flot.resize.min.js"></script>
+
+        
+        <!-- page specific plugin scripts -->
+
+        <!--[if lte IE 8]>
+          <script src="assets/js/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="assets/js/chosen.jquery.min.js"></script>
+        <script src="assets/js/spinbox.min.js"></script>
+        <script src="assets/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/js/bootstrap-timepicker.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/daterangepicker.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/js/bootstrap-colorpicker.min.js"></script>
+        <script src="assets/js/jquery.knob.min.js"></script>
+        <script src="assets/js/autosize.min.js"></script>
+        <script src="assets/js/jquery.inputlimiter.min.js"></script>
+        <script src="assets/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/js/bootstrap-tag.min.js"></script>
+                
+                
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+
+<script type="text/javascript">
+            jQuery(function ($) {
+                //datepicker plugin
+                //link
+                $('.date-picker').datepicker({
+                        autoclose: true,
+                        todayHighlight: true
+                })
+                //show datepicker when clicking on the icon
+                .next().on(ace.click_event, function(){
+                        $(this).prev().focus();
+                });
+
+                //or change it into a date range picker
+                $('.input-daterange').datepicker({autoclose:true});
+
+
+                //to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
+                $('input[name=range_tanggal]').daterangepicker(
+                        
+                {
+                        'applyClass' : 'btn-sm btn-success',
+                        'cancelClass' : 'btn-sm btn-default',
+                        locale: {
+                                applyLabel: 'Apply',
+                                cancelLabel: 'Cancel',
+                                format: 'DD/MM/YYYY',
+                        }
+                })
+                .prev().on(ace.click_event, function(){
+                        $(this).next().focus();
+                });
+
+               $('#id-input-file-1 , #id-input-file-2').ace_file_input({
+            no_file:'No File ...',
+            btn_choose:'Choose',
+            btn_change:'Change',
+            droppable:false,
+            onchange:null,
+            thumbnail:false //| true | large
+            //whitelist:'gif|png|jpg|jpeg'
+            //blacklist:'exe|php'
+            //onchange:''
+            //
+        });
+
+                //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
+                //but sometimes it brings up errors with normal resize event handlers
+                $.resize.throttleWindow = false;
+
+                /////////////////////////////////////
+                $(document).one('ajaxloadstart.page', function (e) {
+                    $tooltip.remove();
+                });
+            });
+</script>
