@@ -11,7 +11,7 @@
 		<div class="col-lg-6">
 			<div class="dbox dbox--color-2">
 				<div class="dbox__icon">
-					<i class="glyphicon glyphicon-cloud"></i>
+					<i class="fa fa-usd"></i>
 				</div>
 				<div class="dbox__body">
 					<span class="dbox__count"><?php $q=mysqli_query($conn,"select sum(sales_total) as todaySum from `sales` where date(sales_date)=(date(now()))");
@@ -24,7 +24,7 @@
 		<div class="col-lg-6">
 			<div class="dbox dbox--color-3">
 				<div class="dbox__icon">
-					<i class="glyphicon glyphicon-cloud"></i>
+					<i class="fa fa-product-hunt"></i>
 				</div>
 				<div class="dbox__body">
 					<span class="dbox__count"><?php $q=mysqli_query($conn,"select p.product_name as productName, SUM(sd.sales_qty) as quantity FROM sales s JOIN sales_detail sd ON s.salesid=sd.salesid JOIN product p ON sd.productid=p.productid WHERE date(s.sales_date)=(date(now())) GROUP BY p.product_name ORDER BY quantity DESC LIMIT 1");
@@ -39,7 +39,7 @@
 		<div class="col-lg-6">
 			<div class="dbox dbox--color-2">
 				<div class="dbox__icon">
-					<i class="glyphicon glyphicon-cloud"></i>
+					<i class="fa fa-usd"></i>
 				</div>
 				<div class="dbox__body">
 					<span class="dbox__count"><?php $q=mysqli_query($conn,"select sum(sales_total) as thisMonthSum from `sales` where month(sales_date)=(month(now())) and year(sales_date)=(year(now()))");
@@ -52,7 +52,7 @@
 		<div class="col-lg-6">
 			<div class="dbox dbox--color-3">
 				<div class="dbox__icon">
-					<i class="glyphicon glyphicon-cloud"></i>
+					<i class="fa fa-product-hunt"></i>
 				</div>
 				<div class="dbox__body">
 					<span class="dbox__count"><?php $q=mysqli_query($conn,"select p.product_name as productName, SUM(sd.sales_qty) as quantity FROM sales s JOIN sales_detail sd ON s.salesid=sd.salesid JOIN product p ON sd.productid=p.productid WHERE MONTH(s.sales_date) = (MONTH(now())) AND year(s.sales_date) = (year(CURRENT_DATE())) GROUP BY p.product_name ORDER BY quantity DESC LIMIT 1");
@@ -156,41 +156,41 @@
 
 
 	.dbox--color-2 {
-	    background: rgb(252, 190, 27);
-	    background: -moz-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
-	    background: -webkit-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
-	    background: linear-gradient(to bottom, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
+	    background: rgb(31, 252, 45);
+	    background: -moz-linear-gradient(top, rgba(31, 252, 45, 1) 1%, rgba(26, 142, 34, 1) 99%);
+	    background: -webkit-linear-gradient(top, rgba(31, 252, 45, 1) 1%, rgba(26, 142, 34, 1) 99%);
+	    background: linear-gradient(to bottom, rgba(31, 252, 45, 1) 1%, rgba(26, 142, 34, 1) 99%);
 	    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcbe1b', endColorstr='#f85648', GradientType=0);
 	}
 	.dbox--color-2 .dbox__icon:after {
 	    background: #fee036;
-	    background: rgba(254, 224, 54, 0.81);
+	    background: rgba(31, 181, 41, 0.81);
 	}
 	.dbox--color-2 .dbox__icon:before {
 	    background: #fee036;
-	    background: rgba(254, 224, 54, 0.64);
+	    background: rgba(31, 181, 41, 0.64);
 	}
 	.dbox--color-2 .dbox__icon > i {
-	    background: #fb9f28;
+	    background: #1FFC29;
 	}
 
 	.dbox--color-3 {
-	    background: rgb(183,71,247);
-	    background: -moz-linear-gradient(top, rgba(183,71,247,1) 0%, rgba(108,83,220,1) 100%);
-	    background: -webkit-linear-gradient(top, rgba(183,71,247,1) 0%,rgba(108,83,220,1) 100%);
-	    background: linear-gradient(to bottom, rgba(183,71,247,1) 0%,rgba(108,83,220,1) 100%);
+	    background: rgbrgb(50,160,255);
+	    background: -moz-linear-gradient(top, rgba(50,160,255,1) 0%, rgba(125,174,230,1) 100%);
+	    background: -webkit-linear-gradient(top, rgba(50,160,255,1) 0%,rgba(125,174,230,1) 100%);
+	    background: linear-gradient(to bottom, rgba(50,160,255,1) 0%,rgba(125,174,230,1) 100%);
 	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b747f7', endColorstr='#6c53dc',GradientType=0 );
 	}
 	.dbox--color-3 .dbox__icon:after {
 	    background: #b446f5;
-	    background: rgba(180, 70, 245, 0.76);
+	    background: rgba(112, 189, 255, 0.76);
 	}
 	.dbox--color-3 .dbox__icon:before {
 	    background: #e284ff;
-	    background: rgba(226, 132, 255, 0.66);
+	    background: rgba(112, 189, 255, 0.66);
 	}
 	.dbox--color-3 .dbox__icon > i {
-	    background: #8150e4;
+	    background: #3FA6FF;
 	}
 </style>
 </html>
