@@ -21,6 +21,26 @@
 			</li>
 		</ul>
 
+        <ul class="nav navbar-top-links navbar-header">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Category <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="sales_trans.php"> All Category</a></li>
+                    <?php
+                        $caq=mysqli_query($conn,"select * from category");
+                        while($catrow=mysqli_fetch_array($caq)){
+                            ?>
+                            <li class="divider"></li>
+                            <li><a href="plist.php?cat=<?php echo $catrow['categoryid']; ?>"><?php echo $catrow['category_name']; ?></a></li>
+                            <?php
+                        }
+
+                    ?>
+                </ul>
+            </li>
+        </ul>
+
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
