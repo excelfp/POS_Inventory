@@ -9,7 +9,7 @@
 	$name=$_POST['name'];
 	$category=$_POST['category'];
 	$price=$_POST['price'];
-	$qty=$_POST['qty'];
+	$qty=$prow['product_qty'];
 	
 	$fileInfo = PATHINFO($_FILES["image"]["name"]);
 	
