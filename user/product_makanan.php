@@ -18,7 +18,6 @@
                     <tr>
                         <th>Product Name</th>
                         <th>Price</th>
-						<th>Quantity</th>
 						<th>Photo</th>
 						<th>Action</th>
                     </tr>
@@ -32,7 +31,6 @@
 						<tr>
 							<td><?php echo $pqrow['product_name']; ?></td>
 							<td><?php echo number_format( $pqrow['product_price'],2,",","."); ?></td>
-							<td><?php echo $pqrow['product_qty']; ?></td>
 							<td><img src="../<?php if(empty($pqrow['photo'])){echo "upload/noimage.jpg";}else{echo $pqrow['photo'];} ?>" height="30px" width="30px;"></td>
 							<td>
 								<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editprod_<?php echo $pid; ?>"><i class="fa fa-edit"></i> Edit</button>

@@ -66,11 +66,6 @@
                             <span class="input-group-addon" style="width:120px;">Price:</span>
                             <input type="text" style="width:400px;" value="<?php echo $b['product_price'] ?>" class="form-control" name="price">
                         </div>
-						<div style="height:10px;"></div>
-						<div class="form-group input-group">
-                            <span class="input-group-addon" style="width:120px;">Quantity:</span>
-                            <input type="text" style="width:400px;" value="<?php echo $b['product_qty'] ?>" class="form-control" name="qty">
-                        </div>
 						<div style="height:10px;"></div>					
 						<div class="form-group input-group">
                             <span class="input-group-addon" style="width:120px;">Photo:</span>

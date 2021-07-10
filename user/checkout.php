@@ -12,9 +12,6 @@
 			<div class="col-lg-3" style="left: 15px;"><span>Customer: </span><input type="text" name="customer" required="true"></div>
 			<div style="height:10px;"></div>
 			<div id="checkout_area"></div>
-			<div class="row">
-				<span class="pull-right" style="margin-right: 15px;"><strong>Payment method Here</strong></span>
-			</div>
 			<div style="height:20px;"></div>
 			<div class="row">
 				<button type="submit" id="check" class="btn btn-primary pull-right" style="margin-right:15px;" value="Confirm"><i class="fa fa-check fa-fw"></i> Confirm</button>

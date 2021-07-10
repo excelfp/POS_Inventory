@@ -33,10 +33,6 @@
                             <input type="text" style="width:400px;" class="form-control" name="price" required>
                         </div>
 						<div class="form-group input-group">
-                            <span style="width:120px;" class="input-group-addon">Quantity:</span>
-                            <input type="text" style="width:400px;" class="form-control" name="qty">
-                        </div>
-						<div class="form-group input-group">
                             <span style="width:120px;" class="input-group-addon">Photo:</span>
                             <input type="file" style="width:400px;" class="form-control" name="image">
                         </div>            

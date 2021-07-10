@@ -17,49 +17,39 @@
 		}
 		else{
 			
-		$fusername=$username;
-		
-		$password = check_input($_POST["password"]);
-		$fpassword=md5($password);
-		
-		$query=mysqli_query($conn,"select * from `user` where username='$fusername' and password='$fpassword'");
-		
-		if(mysqli_num_rows($query)==0){
-			$_SESSION['msg'] = "Login Failed, Invalid Input!";
-			header('location: index.php');
-		}
-		else{
+			$fusername=$username;
 			
-			$row=mysqli_fetch_array($query);
-			if ($row['access']==1){
-				$_SESSION['id']=$row['userid'];
-				?>
-				<script>
-					window.alert('Login Success, Welcome Admin!');
-					window.location.href='admin/';
-				</script>
-				<?php
-			}
-			elseif ($row['access']==2){
-				$_SESSION['id']=$row['userid'];
-				?>
-				<script>
-					window.alert('Login Success, Welcome User!');
-					window.location.href='user/';
-				</script>
-				<?php
+			$password = check_input($_POST["password"]);
+			$fpassword=md5($password);
+			
+			$query=mysqli_query($conn,"select * from `user` where username='$fusername' and password='$fpassword'");
+			
+			if(mysqli_num_rows($query)==0){
+				$_SESSION['msg'] = "Login Failed, Invalid Input!";
+				header('location: index.php');
 			}
 			else{
-				$_SESSION['id']=$row['userid'];
-				?>
-				<script>
-					window.alert('Login Success, Welcome Supplier!');
-					window.location.href='supplier/';
-				</script>
-				<?php
+				
+				$row=mysqli_fetch_array($query);
+				if ($row['access']==1){
+					$_SESSION['id']=$row['userid'];
+					?>
+					<script>
+						window.alert('Login Success, Welcome Admin!');
+						window.location.href='admin/';
+					</script>
+					<?php
+				}
+				elseif ($row['access']==2){
+					$_SESSION['id']=$row['userid'];
+					?>
+					<script>
+						window.alert('Login Success, Welcome User!');
+						window.location.href='user/';
+					</script>
+					<?php
+				}
 			}
-		}
-		
 		}
 	}
 ?>
