@@ -202,6 +202,25 @@ function display_process_hasil_mining($db_object, $id_process) {
         ?>
     </table>
 
+    <br>
+    <h2><strong>Hasil Analisa</strong></h2>
+    <br>
+    <table class='table table-bordered table-striped  table-hover'>
+        <?php
+        $no=1;
+        //while($row=$db_object->db_fetch_array($query)){
+        foreach($data_confidence as $key => $val){
+            if($val['lolos']==1){
+                echo "<tr>";
+                echo "<td>".$no.". Jika konsumen membeli ".$val['kombinasi1']
+                        .", maka konsumen juga akan membeli ".$val['kombinasi2']."</td>";
+                echo "</tr>";
+            }
+            $no++;
+        }
+        ?>
+    </table>
+
     <?php
 }
 ?>
