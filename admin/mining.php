@@ -139,7 +139,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
         echo "<td>" . $x . "</td>";
         echo "<td>" . $item . "</td>";
         echo "<td>" . $jumlah . "</td>";
-        echo "<td>" . price_format($support) . "</td>";
+        // echo "<td>" . price_format($support) . "</td>";
+        echo "<td>" . number_format($support, 2, '.', '') . "%" . "</td>";
         echo "<td>" . (($lolos==1)?"Lolos":"Tidak Lolos") . "</td>";
         echo "</tr>";
         $x++;
@@ -166,7 +167,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
         echo "<td>" . $x . "</td>";
         echo "<td>" . $value . "</td>";
         echo "<td>" . $jumlahItemset1[$key] . "</td>";
-        echo "<td>" . price_format($supportItemset1[$key]) . "</td>";
+        // echo "<td>" . price_format($supportItemset1[$key]) . "</td>";
+        echo "<td>" . number_format($supportItemset1[$key], 2, '.', '') . "%" . "</td>";
         echo "</tr>";
         $x++;
     }
@@ -221,7 +223,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
                         echo "<td>" . $variance1 . "</td>";
                         echo "<td>" . $variance2 . "</td>";
                         echo "<td>" . $jml_itemset2 . "</td>";
-                        echo "<td>" . price_format($support2) . "</td>";
+                        // echo "<td>" . price_format($support2) . "</td>";
+                        echo "<td>" . number_format($support2, 2, '.', '') . "%" . "</td>";
                         echo "<td>" . (($lolos==1)?"Lolos":"Tidak Lolos") . "</td>";
                         echo "</tr>";
                         $no++;
@@ -256,7 +259,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
         echo "<td>" . $value . "</td>";
         echo "<td>" . $itemset2_var2[$key] . "</td>";
         echo "<td>" . $jumlahItemset2[$key] . "</td>";
-        echo "<td>" . price_format($supportItemset2[$key]) . "</td>";
+        // echo "<td>" . price_format($supportItemset2[$key]) . "</td>";
+        echo "<td>" . number_format($supportItemset2[$key], 2, '.', '') . "%" . "</td>";
         echo "</tr>";
         $no++;
     }
@@ -344,7 +348,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
                             echo "<td>" . $itemset2 . "</td>";
                             echo "<td>" . $itemset3 . "</td>";
                             echo "<td>" . $jml_itemset3 . "</td>";
-                            echo "<td>" . price_format($support3) . "</td>";
+                            // echo "<td>" . price_format($support3) . "</td>";
+                            echo "<td>" . number_format($support3, 2, '.', '') . "%" . "</td>";
                             echo "<td>" . (($lolos==1)?"Lolos":"Tidak Lolos") . "</td>";
                             echo "</tr>";
                             $no++;
@@ -382,7 +387,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
         echo "<td>" . $itemset3_var2[$key] . "</td>";
         echo "<td>" . $itemset3_var3[$key] . "</td>";
         echo "<td>" . $jumlahItemset3[$key] . "</td>";
-        echo "<td>" . price_format($supportItemset3[$key]) . "</td>";
+        // echo "<td>" . price_format($supportItemset3[$key]) . "</td>";
+        echo "<td>" . number_format($supportItemset3[$key], 2, '.', '') . "%" . "</td>";
         echo "</tr>";
         $no++;
     }

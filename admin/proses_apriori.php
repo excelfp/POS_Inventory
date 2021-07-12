@@ -133,9 +133,10 @@ if (isset($_POST['submit'])) {
         WHERE transaction_date BETWEEN '$start' AND '$end' ";
         $res = $db_object->db_query($sql);
         $num = $db_object->db_fetch_array($res);
-        $minSupportRelatif = ($_POST['min_support']/$num[0]) * 100;
-        echo "Min Support Relatif: " . $minSupportRelatif;
-        echo "<br>";
+        // $minSupportRelatif = ($_POST['min_support']/$num[0]) * 100;
+        // echo "Min Support Relatif: " . $minSupportRelatif;
+        // echo "<br>";
+        $minSupportRelatif = $_POST['min_support'];
         echo "Min Confidence: " . $_POST['min_confidence'];
         echo "<br>";
         echo "Start Date: " . $_POST['range_tanggal'];
@@ -190,7 +191,7 @@ VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,I
 ('2021-06-10', 'Es Kopi Susu,Ice Americano,Ice Matcha Latte,Donut,French Fries,Kebab,Kue Cokelat (per-slice)'),
 ('2021-06-11', 'Pizza,Burger,Chicken Fingers,Chicken Salad,Donut,French Fries,Kebab,Kue Cokelat (per-slice),Mexican Taco,Nasi Goreng Special,Es Kopi Susu,Air Mineral,Ice Matcha Latte,Teh Tarik,Strawberry Juice'),
 ('2021-06-12', 'Strawberry Juice,Orange Juice,Chicken Fingers,Chicken Salad,Es Kopi Susu,Air Mineral,Ice Americano,Ice Matcha Latte,Kebab,Pancake'),
-('2021-06-13', 'Pizza,Burger,Chicken Fingers,Chicken Salad,Donut,French Fries,Kebab,,Coca-Cola,Air Mineral Ice Americano,Ice Matcha Latte,Teh Tarik,Strawberry Juice,Es Kopi Susu'),
+('2021-06-13', 'Pizza,Burger,Chicken Fingers,Chicken Salad,Donut,French Fries,Kebab,Coca-Cola,Air Mineral,Ice Americano,Ice Matcha Latte,Teh Tarik,Strawberry Juice,Es Kopi Susu'),
 ('2021-06-14', 'Pizza,Chicken Fingers,Es Kopi Susu,Donut,French Fries,Kebab,Kue Cokelat (per-slice),Sprite,Air Mineral,Ice Americano,Ice Matcha Latte,Coca-Cola'),
 ('2021-06-15', 'Chicken Fingers,French Fries,Kebab,Kue Cokelat (per-slice),Mexican Taco,Spaghetti,Fanta,Ice Americano,Teh Tarik,Strawberry Juice,Es Kopi Susu'),
 ('2021-06-17', 'Burger,Donut,Nasi Goreng Special,French Fries,Kue Cokelat (per-slice),Spaghetti,Orange Juice,Strawberry Juice,Es Kopi Susu,Ice Matcha Latte'),
