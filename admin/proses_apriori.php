@@ -435,4 +435,6 @@ VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,I
             });
 </script>
 <?php include('script.php'); ?>
+<?php include('add_modal.php'); ?>
+<?php include('modal.php'); ?>
 <script src="custom.js"></script>

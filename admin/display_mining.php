@@ -190,6 +190,8 @@ function display_process_hasil_mining($db_object, $id_process) {
         
         $no = 1;
         //while ($row1 = $db_object->db_fetch_array($query1)) {
+        $sortConfidence = array_column($data_confidence, 'confidence');
+        array_multisort($sortConfidence, SORT_DESC, $data_confidence);
         foreach($data_confidence as $key => $val){
 //            $kom1 = explode(" , ", $row1['kombinasi1']);
 //            $jika = implode(" Dan ", $kom1);
