@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2021 at 05:20 AM
+-- Generation Time: Aug 13, 2021 at 05:28 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -5155,7 +5155,6 @@ INSERT INTO `inventory` (`inventoryid`, `userid`, `action`, `productid`, `stocki
 (7, 2, 'Purchase', 3, NULL, 12, '2017-09-18 11:09:22'),
 (8, 2, 'Purchase', 4, NULL, 8, '2017-09-18 11:09:22'),
 (9, 1, 'Add Product', 22, NULL, 10, '2017-09-18 13:59:25'),
-(10, 1, 'Update Quantity', 21, NULL, 20, '2017-09-18 14:04:32'),
 (11, 1, 'Add Stock', NULL, 1, 35, '2017-09-18 14:04:32'),
 (12, 2, 'Update Stock Quantity', NULL, 2, 20, '2017-09-18 14:04:32'),
 (13, 1, 'Update Stock Quantity', NULL, 3, 5, '2021-03-18 17:26:33'),
@@ -5233,7 +5232,6 @@ INSERT INTO `inventory` (`inventoryid`, `userid`, `action`, `productid`, `stocki
 (85, 1, 'Stock Return', NULL, 10, 3, '2021-04-09 12:02:49'),
 (86, 1, 'Stock Return', NULL, 10, 40, '2021-04-09 12:19:25'),
 (87, 1, 'Stock Return', NULL, 5, 5, '2021-04-09 12:21:24'),
-(88, 1, 'Update Quantity', 24, NULL, 30, '2021-04-09 14:02:20'),
 (89, 1, 'Update Stock Quantity', NULL, 3, 10, '2021-04-09 14:43:03'),
 (90, 1, 'Update Stock Quantity', NULL, 3, 5, '2021-04-09 14:53:30'),
 (91, 1, 'Update Stock Quantity', NULL, 13, 3, '2021-04-09 14:56:58'),
@@ -5249,7 +5247,6 @@ INSERT INTO `inventory` (`inventoryid`, `userid`, `action`, `productid`, `stocki
 (101, 1, 'Purchase', 2, NULL, 1, '2021-06-16 17:08:56'),
 (102, 2, 'Purchase', 1, NULL, 1, '2021-06-16 18:28:19'),
 (103, 2, 'Purchase', 3, NULL, 3, '2021-06-16 18:28:19'),
-(104, 2, 'Update Quantity', 22, NULL, 450, '2021-06-18 13:48:36'),
 (105, 1, 'Purchase', 1, NULL, 2, '2021-06-19 14:52:45'),
 (106, 1, 'Purchase', 21, NULL, 1, '2021-06-19 14:52:45'),
 (107, 1, 'Purchase', 8, NULL, 2, '2021-07-02 20:59:49'),
