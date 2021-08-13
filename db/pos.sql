@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2021 at 05:28 AM
+-- Generation Time: Aug 13, 2021 at 05:31 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -5317,7 +5317,11 @@ INSERT INTO `inventory` (`inventoryid`, `userid`, `action`, `productid`, `stocki
 (172, 2, 'Purchase', 9, NULL, 1, '2021-08-13 10:12:06'),
 (173, 2, 'Purchase', 1, NULL, 3, '2021-08-13 10:12:31'),
 (174, 2, 'Purchase', 3, NULL, 1, '2021-08-13 10:12:31'),
-(175, 2, 'Purchase', 10, NULL, 3, '2021-08-13 10:12:31');
+(175, 2, 'Purchase', 10, NULL, 3, '2021-08-13 10:12:31'),
+(176, 1, 'Update Stock Quantity', NULL, 10, 5, '2021-08-13 10:29:53'),
+(177, 1, 'Update Stock Quantity', NULL, 5, 10, '2021-08-13 10:30:32'),
+(178, 1, 'Update Stock Quantity', NULL, 11, 4, '2021-08-13 10:30:42'),
+(179, 1, 'Stock Return', NULL, 10, 2, '2021-08-13 10:31:18');
 
 -- --------------------------------------------------------
 
@@ -9554,14 +9558,14 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`stockid`, `stock_name`, `stock_price`, `stock_qty`, `min_qty`, `supplierid`) VALUES
-(1, 'Susu Murni 1L', 27000, 10, 9, 5),
+(1, 'Susu Murni 1L', 27000, 10, 6, 4),
 (2, 'Sendok Plastik', 7000, 25, 0, 6),
 (3, 'Beans Kopi Mandailing', 42000, 5, 5, 7),
-(4, 'Kentang Goreng Curly', 26500, 3, 0, 5),
-(5, 'Kripik Kentang Pedas', 17000, 5, 0, 6),
+(4, 'Kentang Goreng Curly', 26500, 3, 2, 7),
+(5, 'Kripik Kentang Pedas', 17000, 10, 5, 6),
 (6, 'Coffee Grinder Super', 98000, 1, 0, 7),
-(10, 'Kentang Farmhouse', 25000, 6, 0, 6),
-(11, 'Java Beans Houseblend 500gr', 20000, 5, 0, 7),
+(10, 'Kentang Farmhouse', 25000, 5, 2, 6),
+(11, 'Java Beans Houseblend 500gr', 20000, 4, 3, 7),
 (12, 'Ayam Dada 200gr', 17500, 10, 10, 4),
 (13, 'Tepung Roti 500gr', 23000, 3, 2, 5);
 
@@ -9588,7 +9592,8 @@ INSERT INTO `stock_return` (`stock_returnid`, `stockid`, `return_qty`, `return_d
 (19, 2, 12, '2021-04-09 11:34:28', 10, 'Patah'),
 (20, 1, 2, '2021-04-09 11:40:53', 5, 'Basi'),
 (21, 5, 5, '2021-04-09 12:21:24', 5, 'Kadaluarsa'),
-(22, 3, 5, '2021-04-09 15:30:41', 7, 'Beans tidak layak roasting');
+(22, 3, 5, '2021-04-09 15:30:41', 7, 'Beans tidak layak roasting'),
+(23, 10, 2, '2021-08-13 10:31:18', 5, 'Kentang berjamur');
 
 -- --------------------------------------------------------
 
@@ -9652,6 +9657,7 @@ INSERT INTO `transaksi` (`id`, `transaction_date`, `produk`) VALUES
 (16, '2021-07-02', 'Kue Cokelat (per-slice),Donut,Pizza'),
 (17, '2021-07-03', 'Pizza,Coca-Cola'),
 (18, '2021-07-13', 'French Fries,Coca-Cola,Burger,Air Mineral,Ice Matcha Latte'),
+(19, '2021-08-13', 'French Fries,Pizza,Ice Americano,Ice Matcha Latte,Burger,Pancake,Chicken Fingers,Coca-Cola,Fanta,Air Mineral,Chicken Salad'),
 (32, '2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,Ice Matcha Latte'),
 (33, '2021-06-06', 'Es Kopi Susu,Ice Americano,Orange Juice,Ice Matcha Latte,Donut'),
 (34, '2021-06-07', 'Es Kopi Susu,Ice Americano,Ice Matcha Latte,Donut'),
@@ -9840,7 +9846,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `inventory`
-  MODIFY `inventoryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `inventoryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
 
 --
 -- AUTO_INCREMENT for table `process_log`
@@ -9876,7 +9882,7 @@ ALTER TABLE `stock`
 -- AUTO_INCREMENT for table `stock_return`
 --
 ALTER TABLE `stock_return`
-  MODIFY `stock_returnid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `stock_returnid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
