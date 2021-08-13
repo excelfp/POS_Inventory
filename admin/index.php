@@ -64,7 +64,14 @@
 				<div class="dbox__body">
 					<span class="dbox__count"><?php $q=mysqli_query($conn,"select p.product_name as productName, SUM(sd.sales_qty) as quantity FROM sales s JOIN sales_detail sd ON s.salesid=sd.salesid JOIN product p ON sd.productid=p.productid WHERE MONTH(s.sales_date) = (MONTH(now())) AND year(s.sales_date) = (year(CURRENT_DATE())) GROUP BY p.product_name ORDER BY quantity DESC LIMIT 1");
 								$qrow=mysqli_fetch_array($q);
-								echo $qrow['productName'] . ": " . $qrow['quantity']; ?></span>
+								$pName = isset($qrow['productName']) ? $qrow['productName'] : "";
+								$pQty = isset($qrow['quantity']) ? $qrow['quantity'] : 0;
+								if($pName == "" && $pQty == 0){
+							        echo "No Transaction Yet";
+							    }
+							    else{
+							    	echo $pName . ": " . $pQty;
+							    } ?></span>
 					<span class="dbox__title">This Month's Top Product</span>
 				</div>			
 			</div>

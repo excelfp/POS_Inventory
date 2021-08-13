@@ -1,14 +1,22 @@
 <?php
 include('session.php');
 include('header.php'); 
+include('database.php'); 
+include('fungsi.php'); 
+include('mining.php'); 
+include('display_mining.php'); 
 
-include_once "database.php";
-include_once "fungsi.php";
-include_once "mining.php";
-include_once "display_mining.php";
+// include_once "database.php";
+// include_once "fungsi.php";
+// include_once "mining.php";
+// include_once "display_mining.php";
 ?>
 <div id="wrapper">
-<?php include('navbar.php'); ?>
+<?php 
+include('navbar.php');
+include('script.php'); 
+include('modal.php'); 
+ ?>
 <div id="page-wrapper" class="main-content">
     <div class="main-content-inner">
         <div class="container-fluid">
@@ -435,6 +443,4 @@ VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,I
             });
 </script>
 <?php include('script.php'); ?>
-<?php include('add_modal.php'); ?>
-<?php include('modal.php'); ?>
 <script src="custom.js"></script>

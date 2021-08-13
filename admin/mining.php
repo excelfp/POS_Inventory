@@ -83,7 +83,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
     $result_trans = $db_object->db_query($sql_trans);
     $dataTransaksi = $item_list = array();
     $jumlah_transaksi = $db_object->db_num_rows($result_trans);
-    $min_support_relative = ($min_support/$jumlah_transaksi)*100; 
+    // $min_support_relative = ($min_support/$jumlah_transaksi)*100; 
+    $min_support_relative = $min_support; 
     $x=0;
     while($myrow = $db_object->db_fetch_array($result_trans)){
         $dataTransaksi[$x]['tanggal'] = $myrow['transaction_date'];
