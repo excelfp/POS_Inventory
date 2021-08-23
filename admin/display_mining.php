@@ -183,7 +183,7 @@ function display_process_hasil_mining($db_object, $id_process) {
             <th>X => Y</th>
             <th>Confidence</th>
             <th>Nilai Uji lift</th>
-            <th>Korelasi rule</th>
+            <th>Korelasi Rule</th>
             <!-- <th></th> -->
         </tr>
         <?php

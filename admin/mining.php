@@ -181,8 +181,8 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
     echo "<table class='table table-bordered table-striped  table-hover'>
             <tr>
                 <th>No</th>
-                <th>Item1</th>
-                <th>Item2</th>
+                <th>Item 1</th>
+                <th>Item 2</th>
                 <th>Jumlah</th>
                 <th>Suppport</th>
                 <th>Keterangan</th>
@@ -272,9 +272,9 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
     echo "<table class='table table-bordered table-striped  table-hover'>
             <tr>
                 <th>No</th>
-                <th>Item1</th>
-                <th>Item2</th>
-                <th>Item3</th>
+                <th>Item 1</th>
+                <th>Item 2</th>
+                <th>Item 3</th>
                 <th>Jumlah</th>
                 <th>Suppport</th>
                 <th>Keterangan</th>
