@@ -6,7 +6,7 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-right: 10px; padding-top: 15px;">
 						<span class="glyphicon glyphicon-user"></span> <?php echo $user; ?> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu">

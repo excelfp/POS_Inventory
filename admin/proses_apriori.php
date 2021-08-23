@@ -4,12 +4,7 @@ include('header.php');
 include('database.php'); 
 include('fungsi.php'); 
 include('mining.php'); 
-include('display_mining.php'); 
-
-// include_once "database.php";
-// include_once "fungsi.php";
-// include_once "mining.php";
-// include_once "display_mining.php";
+include('display_mining.php');
 ?>
 <head>
    <!-- bootstrap & fontawesome -->

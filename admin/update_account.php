@@ -13,7 +13,7 @@
 		</script>
 		<?php
 	}
-	elseif($cpass!=$srow['password']){
+	else if($cpass!=$srow['password']){
 		?>
 		<script>
 			window.alert('Current password did not match. Account not updated!');
