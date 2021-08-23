@@ -45,13 +45,13 @@ if (isset($_POST['submit'])) {
     if (empty($_POST['min_support']) || empty($_POST['min_confidence'])) {
         $can_process = false;
         ?>
-        <script> location.replace("?menu=proses_apriori&pesan_error=Min Support dan Min Confidence harus diisi");</script>
+        <script> location.replace("?menu=proses_apriori&pesan_error=Min. Support dan Min. Confidence harus diisi");</script>
         <?php
     }
     if(!is_numeric($_POST['min_support']) || !is_numeric($_POST['min_confidence'])){
         $can_process = false;
         ?>
-        <script> location.replace("?menu=proses_apriori&pesan_error=Min Support dan Min Confidence harus diisi angka");</script>
+        <script> location.replace("?menu=proses_apriori&pesan_error=Min. Support dan Min. Confidence harus diisi angka");</script>
         <?php
     }
     //  01/09/2016 - 30/09/2016
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-lg-6 " >
                         <!-- Date range -->
                         <div class="form-group">
-                            <label>Tanggal: </label>
+                            <label>Transaksi per Tanggal: </label>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
@@ -114,16 +114,16 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="col-lg-6 " >
                         <div class="form-group">
-                            <label>Min Support: </label>
+                            <label>Min. Support: </label>
                             <input name="min_support" type="text" 
                                    value="<?php echo $_POST['min_support']; ?>"
-                                   class="form-control" placeholder="Min Support">
+                                   class="form-control" placeholder="Min. Support">
                         </div>
                         <div class="form-group">
-                            <label>Min Confidence: </label>
+                            <label>Min. Confidence: </label>
                             <input name="min_confidence" type="text"
                                    value="<?php echo $_POST['min_confidence']; ?>"
-                                   class="form-control" placeholder="Min Confidence">
+                                   class="form-control" placeholder="Min. Confidence">
                         </div>
                         <input type="hidden" name="id_process" value="<?php echo $id_process; ?>">
                         <div class="form-group">
@@ -137,7 +137,7 @@ if (isset($_POST['submit'])) {
         <?php
 
 
-        echo "Min Support Absolut: " . $_POST['min_support'];
+        echo "Min. Support Absolut: " . $_POST['min_support'];
         echo "<br>";
         $sql = "SELECT COUNT(*) FROM transaksi 
         WHERE transaction_date BETWEEN '$start' AND '$end' ";
@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
         // echo "Min Support Relatif: " . $minSupportRelatif;
         // echo "<br>";
         $minSupportRelatif = $_POST['min_support'];
-        echo "Min Confidence: " . $_POST['min_confidence'];
+        echo "Min. Confidence: " . $_POST['min_confidence'];
         echo "<br>";
         echo "Start Date: " . $_POST['range_tanggal'];
         echo "<br>";
@@ -261,7 +261,7 @@ VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,I
             <div class="col-lg-6 " >
                 <!-- Date range -->
                 <div class="form-group">
-                    <label>Tanggal: </label>
+                    <label>Transaksi per Tanggal: </label>
                     <div class="input-group">
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
@@ -279,10 +279,10 @@ VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,I
             </div>
             <div class="col-lg-6 " >
                 <div class="form-group">
-                    <input name="min_support" type="text" class="form-control" placeholder="Min Support">
+                    <input name="min_support" type="text" class="form-control" placeholder="Min. Support">
                 </div>
                 <div class="form-group">
-                    <input name="min_confidence" type="text" class="form-control" placeholder="Min Confidence">
+                    <input name="min_confidence" type="text" class="form-control" placeholder="Min. Confidence">
                 </div>
                 <div class="form-group">
                     <input name="submit" type="submit" value="Proses" class="btn btn-success">
