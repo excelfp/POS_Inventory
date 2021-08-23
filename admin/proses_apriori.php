@@ -182,11 +182,7 @@ else {
 
     $truncate_transaksi_table= $db_object->db_query("TRUNCATE TABLE transaksi");
     $set_transaksi_table= $db_object->db_query("INSERT INTO transaksi (transaction_date, produk)
-        SELECT s.sales_date, GROUP_CONCAT(DISTINCT p.product_name SEPARATOR ',') AS Products
-        FROM sales s 
-        INNER JOIN sales_detail sd ON s.salesid = sd.salesid
-        INNER JOIN product p ON sd.productid = p.productid
-        GROUP BY s.sales_date");
+        SELECT DATE(s.sales_date), GROUP_CONCAT(DISTINCT p.product_name SEPARATOR ',') AS Products FROM sales s INNER JOIN sales_detail sd ON s.salesid = sd.salesid INNER JOIN product p ON sd.productid = p.productid GROUP BY DATE(s.sales_date)");
     $add_sample_data=$db_object->db_query("INSERT INTO TRANSAKSI(`transaction_date`, `produk`)
 VALUES ('2021-06-05', 'Pizza,Coca-Cola,Es Kopi Susu,Ice Americano,Orange Juice,Ice Matcha Latte'),
 ('2021-06-06', 'Es Kopi Susu,Ice Americano,Orange Juice,Ice Matcha Latte,Donut'),
